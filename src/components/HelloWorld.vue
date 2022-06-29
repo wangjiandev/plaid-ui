@@ -6,25 +6,16 @@ defineProps<{
 
 <template>
   <div class="greetings">
-    <h1
-      class="
-      green
-      p-1
-      m-1
-      bg-black
-      text-center
-      flex
-      text-black
-      font-italic
-      transform-unset
-      h-2xl
-      w-1"
-    >
+    <h1 class="green">
       {{ msg }}
     </h1>
+    <h2 bg-red px-4 text-center rounded py-2 mb-2>
+      Test unocss
+    </h2>
     <h3>
       Youve successfully created a project with
-      <a target="_blank" href="https://vitejs.dev/">Vite</a>
+      <a target="_blank" href="https://vitejs.dev/">
+        Vite</a>
       +
       <a target="_blank" href="https://vuejs.org/">Vue 3</a>
       . What's next?
