@@ -17,7 +17,7 @@ defineProps<{
       <a target="_blank" href="https://vitejs.dev/">
         Vite</a>
       +
-      <a target="_blank" href="https://vuejs.org/">Vue 3</a>
+      <a target="_blank" class="text-3xl" href="https://vuejs.org/">Vue 3</a>
       . What's next?
     </h3>
   </div>
