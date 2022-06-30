@@ -1,9 +1,19 @@
 <script setup lang="ts">
+import Masonry from 'masonry-layout'
+import { onMounted } from 'vue'
 import NavigationItem from './NavigationItem.vue'
 import { useMenuStore } from '@/stores/menu'
 import menus from '@/mock/menus.json'
 
 const menuStore = useMenuStore()
+
+onMounted(() => {
+  const grid = document.querySelector('.grid')!
+  const msnry = new Masonry(grid, {
+    itemSelector: '.grid-item',
+    columnWidth: 220,
+  })
+})
 </script>
 
 <template>
@@ -24,7 +34,7 @@ const menuStore = useMenuStore()
       </div>
     </div>
     <div class="h-full w-0.5 bg-gray-500/10 " />
-    <div class="absolute top-0 bottom-0 w-180 pl-10 -z-1 bg-nav dark:bg-lnav duration-1000" :class="menuStore.isVisible ? 'left-68' : '-left-68'">
+    <div class="absolute top-0 bottom-0 w-180 pl-18 -z-1 bg-nav dark:bg-lnav duration-1000" :class="menuStore.isVisible ? 'left-68' : '-left-68'">
       <!-- 搜素框 -->
       <div class="pl-4 pr-16 my-5">
         <div class="border-b-1 border-b-gray-500">
@@ -58,9 +68,9 @@ const menuStore = useMenuStore()
         </div>
       </div>
       <!-- 全部功能列表 -->
-      <n-scrollbar style="max-height: 100%">
-        <div class="columns-3 gap-0">
-          <NavigationItem v-for="item in menus" :key="item.id" :item="item" />
+      <n-scrollbar style="height: calc(100vh - 17rem);">
+        <div class="grid">
+          <NavigationItem v-for="item in menus" :key="item.id" class="grid-item" :item="item" />
         </div>
       </n-scrollbar>
     </div>
