@@ -6,15 +6,13 @@ const menuStore = useMenuStore()
 </script>
 
 <template>
-  <n-layout h-screen>
-    <n-layout-header>
-      <HeaderBar />
-    </n-layout-header>
+  <n-layout>
+    <HeaderBar />
     <n-layout>
-      <n-layout-content dark:bg-black relative>
-        <div v-if="menuStore.isVisible" class="absolute top-0  w-screen bottom-0 left-0 bg-black/60 z-99" @click="menuStore.toggleMenuVisible" />
+      <n-layout-content class="h-screen relative">
+        <div v-if="menuStore.isVisible" class="absolute top-0 w-screen bottom-0 left-0 bg-black/60 z-99" @click="menuStore.toggleMenuVisible" />
         <NavigationBar />
-        <div p-4>
+        <div p-4 mt-15>
           <n-breadcrumb>
             <n-breadcrumb-item>
               北京总行
@@ -37,4 +35,8 @@ const menuStore = useMenuStore()
   </n-layout>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.main-content{
+  height: 100vh;
+}
+</style>
