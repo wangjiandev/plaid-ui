@@ -6,7 +6,7 @@ export interface IAction {
 export interface IFeature {
   id: string
   featureTitle: string
-  features: IAction[]
+  actions: IAction[]
 }
 
 export interface ICollection {

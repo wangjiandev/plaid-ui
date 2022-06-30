@@ -58,13 +58,14 @@ const menuStore = useMenuStore()
         </div>
       </div>
       <!-- 全部功能列表 -->
-      <div class="flex flex-col cursor-pointer w-full justify-start items-start ">
-        <div class="flex flex-row justify-between p-2 flex-wrap w-full items-start gap-2 ">
+      <n-scrollbar style="max-height: 100%">
+        <div class="columns-3 gap-0">
           <NavigationItem v-for="item in menus" :key="item.id" :item="item" />
         </div>
-      </div>
+      </n-scrollbar>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

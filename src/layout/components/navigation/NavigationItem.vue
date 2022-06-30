@@ -10,12 +10,13 @@ const props = defineProps<Props>()
 </script>
 
 <template>
-  <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-    <div class="text-sky font-bold text-sm p-2">
+  <div class="flex flex-col justify-start items-start text-xs font-bold mb-8 " style="width: 220px;">
+    <div class="text-sky-400 font-bold text-lg p-2 w-46">
       {{ item.collectionTitle }}
     </div>
     <NavigationFeature v-for="feature in item.features" :key="feature.id" :feature="feature" />
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
