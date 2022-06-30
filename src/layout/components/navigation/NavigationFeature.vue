@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import NavigationAction from './NavigationAction.vue'
-import type { IFeature } from '@/type/menu'
+import type { IFeature } from '@/types/menu'
 interface Props {
   feature: IFeature
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import NavigationFeature from './NavigationFeature.vue'
-import type { ICollection } from '@/type/menu'
+import type { ICollection } from '@/types/menu'
 
 interface Props {
   item: ICollection

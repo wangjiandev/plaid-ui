@@ -2,9 +2,11 @@
 import Masonry from 'masonry-layout'
 import { onMounted } from 'vue'
 import NavigationItem from './NavigationItem.vue'
+import FollowAction from './FollowAction.vue'
 import { useMenuStore } from '@/stores/menu'
 import menus from '@/mock/menus.json'
-
+import useMenu from '@/composables/useMenu'
+const { actions } = useMenu()
 const menuStore = useMenuStore()
 
 onMounted(() => {
@@ -24,12 +26,14 @@ onMounted(() => {
           功能导航
         </div>
       </div>
-      <div class="flex flex-row cursor-pointer w-full h-12 justify-start items-center hover:bg-select/20">
-        <div flex w-10 justify-center items-center>
-          <i class="fa-duotone fa-align-justify" />
-        </div>
-        <div class="text-sm">
-          自定义收藏功能
+      <div v-if="actions.length > 0" class="w-full">
+        <FollowAction v-for="action in actions" :key="action.id" :action="action" />
+      </div>
+      <div v-if="actions.length === 0" class="w-full">
+        <div class="flex flex-row cursor-pointer w-full h-24 justify-center items-center">
+          <div class="text-sm text-gray-400/50">
+            暂未收藏功能菜单
+          </div>
         </div>
       </div>
     </div>
