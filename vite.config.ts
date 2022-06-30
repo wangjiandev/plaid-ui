@@ -1,7 +1,8 @@
 import { URL, fileURLToPath } from 'url'
 import Unocss from 'unocss/vite'
 import { presetAttributify, presetUno } from 'unocss'
-
+import Components from 'unplugin-vue-components/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
@@ -20,6 +21,8 @@ export default defineConfig({
       presetAttributify({}),
       presetUno(),
     ],
+  }), Components({
+    resolvers: [NaiveUiResolver()],
   })],
   resolve: {
     alias: {
