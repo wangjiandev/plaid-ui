@@ -41,34 +41,6 @@
         <n-button tertiary round type="error">
           Error
         </n-button>
-        <n-button tertiary circle>
-          <template #icon>
-            <n-icon><cash-icon /></n-icon>
-          </template>
-        </n-button>
-        <n-button tertiary circle type="primary">
-          <template #icon>
-            <n-icon><cash-icon /></n-icon>
-          </template>
-        </n-button>
-        <n-button tertiary circle type="info">
-          <template #icon>
-            <n-icon><cash-icon /></n-icon>
-          </template>
-        </n-button>
-        <n-button tertiary circle type="success">
-          <n-icon><cash-icon /></n-icon>
-        </n-button>
-        <n-button tertiary circle type="warning">
-          <template #icon>
-            <n-icon><cash-icon /></n-icon>
-          </template>
-        </n-button>
-        <n-button tertiary circle type="error">
-          <template #icon>
-            <n-icon><cash-icon /></n-icon>
-          </template>
-        </n-button>
       </n-space>
     </n-card>
     <n-card mt-10>

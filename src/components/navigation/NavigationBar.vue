@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import EcosystemIcon from '../icons/IconEcosystem.vue'
 import { useMenuStore } from '@/stores/menu'
 const menuStore = useMenuStore()
 </script>
@@ -20,7 +19,7 @@ const menuStore = useMenuStore()
     <div w-68 border-r-2 flex flex-col justify-start items-center class="border-r-gray-900/10">
       <div class="flex cursor-pointer w-full h-12 justify-start items-center hover:bg-select">
         <div flex w-10 justify-center items-center>
-          <EcosystemIcon />
+          <i class="fa-duotone fa-align-justify" />
         </div>
         <div class="text-sm">
           日常保养与小修
@@ -28,7 +27,7 @@ const menuStore = useMenuStore()
       </div>
       <div class="flex cursor-pointer w-full h-12 justify-start items-center hover:bg-select">
         <div flex w-10 justify-center items-center>
-          <EcosystemIcon />
+          <i class="fa-duotone fa-align-justify" />
         </div>
         <div class="text-sm">
           日常保养与小修
@@ -36,7 +35,7 @@ const menuStore = useMenuStore()
       </div>
       <div class="flex cursor-pointer w-full h-12 justify-start items-center hover:bg-select">
         <div flex w-10 justify-center items-center>
-          <EcosystemIcon />
+          <i class="fa-duotone fa-align-justify" />
         </div>
         <div class="text-sm">
           日常保养与小修
@@ -44,7 +43,7 @@ const menuStore = useMenuStore()
       </div>
       <div class="flex cursor-pointer w-full h-12 justify-start items-center hover:bg-select">
         <div flex w-10 justify-center items-center>
-          <EcosystemIcon />
+          <i class="fa-duotone fa-align-justify" />
         </div>
         <div class="text-sm">
           日常保养与小修
@@ -52,7 +51,7 @@ const menuStore = useMenuStore()
       </div>
       <div class="flex cursor-pointer w-full h-12 justify-start items-center hover:bg-select">
         <div flex w-10 justify-center items-center>
-          <EcosystemIcon />
+          <i class="fa-duotone fa-align-justify" />
         </div>
         <div class="text-sm">
           日常保养与小修
