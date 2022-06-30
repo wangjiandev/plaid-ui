@@ -10,7 +10,7 @@ const menuStore = useMenuStore()
     <HeaderBar />
     <n-layout>
       <n-layout-content class="h-screen relative">
-        <div v-if="menuStore.isVisible" class="absolute top-0 w-screen bottom-0 left-0 bg-black/60 z-99" @click="menuStore.toggleMenuVisible" />
+        <div v-if="menuStore.isVisible" class="absolute backdrop-blur-sm top-0 w-screen bottom-0 left-0 bg-black/60 z-99" @click="menuStore.toggleMenuVisible" />
         <NavigationBar />
         <div p-4 mt-15>
           <n-breadcrumb>

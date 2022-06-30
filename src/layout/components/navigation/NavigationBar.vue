@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import NavigationItem from './NavigationItem.vue'
 import { useMenuStore } from '@/stores/menu'
+import menus from '@/mock/menus.json'
+
 const menuStore = useMenuStore()
 </script>
 
@@ -22,11 +25,13 @@ const menuStore = useMenuStore()
     </div>
     <div class="h-full w-0.5 bg-gray-500/10 " />
     <div class="absolute top-0 bottom-0 w-180 pl-10 -z-1 bg-nav dark:bg-lnav duration-1000" :class="menuStore.isVisible ? 'left-68' : '-left-68'">
+      <!-- 搜素框 -->
       <div class="pl-4 pr-16 my-5">
         <div class="border-b-1 border-b-gray-500">
           <input type="text" placeholder="请输入关键字搜索" class="bg-transparent text-gray-400 border-0 outline-none mb-2">
         </div>
       </div>
+      <!-- 最近访问 -->
       <div class="flex flex-col mb-4 cursor-pointer w-full justify-start items-start ">
         <div class="flex justify-start items-center pt-2 px-4">
           最近访问
@@ -52,247 +57,10 @@ const menuStore = useMenuStore()
           </div>
         </div>
       </div>
+      <!-- 全部功能列表 -->
       <div class="flex flex-col cursor-pointer w-full justify-start items-start ">
         <div class="flex flex-row justify-between p-2 flex-wrap w-full items-start gap-2 ">
-          <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-            <div class="text-sky font-bold text-sm p-2">
-              养护计划
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                总计划
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划编制
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划汇总
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划月报
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                计划年报
-              </div>
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                小修计划
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更申请
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更备忘录
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划对比
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                计划进度
-              </div>
-            </div>
-          </div>
-
-          <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-            <div class="text-sky font-bold text-sm p-2">
-              养护计划
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                总计划
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划编制
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划汇总
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划月报
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                计划年报
-              </div>
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                小修计划
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更申请
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更备忘录
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划对比
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                计划进度
-              </div>
-            </div>
-          </div>
-
-          <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-            <div class="text-sky font-bold text-sm p-2">
-              小修工程
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                应急小修
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                派工单
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                验收申请
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                验收单
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                月报表
-              </div>
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                小修计划
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更申请
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更备忘录
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划对比
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                计划进度
-              </div>
-            </div>
-          </div>
-
-          <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-            <div class="text-sky font-bold text-sm p-2">
-              养护计划
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                总计划
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划编制
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划汇总
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划月报
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                计划年报
-              </div>
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                小修计划
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更申请
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更备忘录
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划对比
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                计划进度
-              </div>
-            </div>
-          </div>
-
-          <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-            <div class="text-sky font-bold text-sm p-2">
-              养护计划
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                总计划
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划编制
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划汇总
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划月报
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                计划年报
-              </div>
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                小修计划
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更申请
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更备忘录
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划对比
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                计划进度
-              </div>
-            </div>
-          </div>
-
-          <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-            <div class="text-sky font-bold text-sm p-2">
-              养护计划
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                总计划
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划编制
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划汇总
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划月报
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                计划年报
-              </div>
-            </div>
-            <div class="w-46 flex flex-col justify-start items-start text-xs font-bold ">
-              <div class="text-white font-bold text-sm underline decoration-2 decoration-sky-500 p-2">
-                小修计划
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更申请
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                变更备忘录
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2">
-                计划对比
-              </div>
-              <div class="hover:bg-black w-46 flex justify-start items-start text-xs font-bold p-2 mb-4">
-                计划进度
-              </div>
-            </div>
-          </div>
+          <NavigationItem v-for="item in menus" :key="item.id" :item="item" />
         </div>
       </div>
     </div>
