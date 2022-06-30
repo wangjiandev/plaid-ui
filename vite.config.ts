@@ -12,7 +12,8 @@ export default defineConfig({
     theme: {
       colors: {
         panel: '#3a3a3a',
-        nav: '#212121',
+        lnav: '#212121',
+        nav: '#eaedf1',
         cool: '#353535',
         select: '#494949',
       },

@@ -12,7 +12,9 @@ const theme = computed(() => {
 
 <template>
   <NConfigProvider :theme="theme">
-    <RouterView />
+    <n-loading-bar-provider>
+      <RouterView />
+    </n-loading-bar-provider>
   </NConfigProvider>
 </template>
 
