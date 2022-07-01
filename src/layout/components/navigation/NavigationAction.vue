@@ -11,7 +11,9 @@ interface Props {
 <template>
   <div class="group cursor-pointer hover:bg-gray-500/20 w-50 rounded flex justify-between duration-100 items-start text-gray-500 text-xs font-bold p-2">
     {{ action.actionTitle }}
-    <i class="fa-duotone fa-star invisible" group-hover:visible @click="addAction(action)" />
+    <div class="font-bold invisible h-full w-4 group-hover:visible" @click="addAction(action)">
+      <i class="fa-duotone fa-plus " />
+    </div>
   </div>
 </template>
 

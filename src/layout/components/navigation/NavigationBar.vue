@@ -22,7 +22,7 @@ onMounted(() => {
   <div class="absolute top-14 bottom-0 z-99 flex flex-row duration-500" :class="menuStore.isVisible ? 'left-0' : '-left-full'">
     <div class="w-68 flex flex-col justify-start items-center bg-nav dark:bg-lnav">
       <div class="flex mt-4 flex-row cursor-pointer w-full h-10 justify-start items-center  text-gray-500 font-bold">
-        <div class="text-xs ml-4">
+        <div class="text-xs ml-4 select-none">
           功能导航
         </div>
       </div>
@@ -31,7 +31,7 @@ onMounted(() => {
       </div>
       <div v-if="actions.length === 0" class="w-full">
         <div class="flex flex-row cursor-pointer w-full h-24 justify-center items-center">
-          <div class="text-sm text-gray-400/50">
+          <div class="text-sm select-none text-gray-400/50">
             暂未收藏功能菜单
           </div>
         </div>
