@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     NCollapse: typeof import('naive-ui')['NCollapse']
     NCollapseItem: typeof import('naive-ui')['NCollapseItem']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
+    NGradientText: typeof import('naive-ui')['NGradientText']
     NLayout: typeof import('naive-ui')['NLayout']
     NLayoutContent: typeof import('naive-ui')['NLayoutContent']
     NLoadingBarProvider: typeof import('naive-ui')['NLoadingBarProvider']
