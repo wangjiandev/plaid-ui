@@ -5,6 +5,11 @@
   <BaseBox>
     <main>
       <n-card>
+        <n-gradient-text :size="24" type="success">
+          Next generation front-end UI.
+        </n-gradient-text>
+      </n-card>
+      <n-card mt-10>
         <n-space>
           <n-button tertiary>
             Default
