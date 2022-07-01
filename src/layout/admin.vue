@@ -1,8 +1,15 @@
 <script setup lang="ts">
+import hotkeys from 'hotkeys-js'
 import NavigationBar from './components/navigation/NavigationBar.vue'
 import HeaderBar from './components/header/HeaderBar.vue'
 import { useMenuStore } from '@/stores/menu'
+
 const menuStore = useMenuStore()
+
+hotkeys('a', (event) => {
+  event.preventDefault()
+  menuStore.toggleMenuVisible()
+})
 </script>
 
 <template>
