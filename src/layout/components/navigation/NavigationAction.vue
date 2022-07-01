@@ -24,7 +24,7 @@ const goPage = () => {
 <template>
   <div class="group cursor-pointer hover:bg-gray-500/20 w-50 rounded flex justify-between duration-100 items-start text-gray-500 text-xs font-bold p-2" @click="goPage">
     {{ action.actionTitle }}
-    <div class="font-bold invisible h-full w-4 group-hover:visible" @click="addAction(action)">
+    <div class="font-bold invisible h-full w-4 group-hover:visible" @click.stop="addAction(action)">
       <i class="fa-duotone fa-plus " />
     </div>
   </div>
