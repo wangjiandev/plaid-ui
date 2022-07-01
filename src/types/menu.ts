@@ -1,6 +1,7 @@
 export interface IAction {
   id: string
   actionTitle: string
+  url: string
 }
 
 export interface IFeature {
