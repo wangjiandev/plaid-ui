@@ -25,8 +25,8 @@ const menuStore = useMenuStore()
             </n-breadcrumb-item>
           </n-breadcrumb>
         </div>
-        <div p-4>
-          <n-scrollbar>
+        <div>
+          <n-scrollbar style="max-height: calc(100vh - 8rem);">
             <RouterView />
           </n-scrollbar>
         </div>
