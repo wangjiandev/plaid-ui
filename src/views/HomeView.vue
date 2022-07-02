@@ -9,7 +9,7 @@
           Next generation front-end UI.
         </n-gradient-text>
       </n-card>
-      <n-card mt-10>
+      <n-card mt-4>
         <n-space>
           <n-button tertiary>
             Default
@@ -49,7 +49,7 @@
           </n-button>
         </n-space>
       </n-card>
-      <n-card mt-10>
+      <n-card mt-4>
         <n-table :bordered="false" :single-line="false">
           <thead>
             <tr>

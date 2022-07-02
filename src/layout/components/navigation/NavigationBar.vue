@@ -19,7 +19,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="absolute top-14 bottom-0 z-99 flex flex-row duration-500" :class="menuStore.isVisible ? 'left-0' : '-left-full'">
+  <div class="absolute top-14 bottom-0 z-99 flex flex-row duration-100" :class="menuStore.isVisible ? 'left-0' : '-left-full'">
     <div class="w-68 flex flex-col justify-start items-center bg-nav dark:bg-lnav">
       <div class="flex mt-4 flex-row cursor-pointer w-full h-10 justify-start items-center  text-gray-500 font-bold">
         <div class="text-xs ml-4 select-none">
@@ -38,7 +38,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="h-full w-0.5 bg-gray-500/10 " />
-    <div class="absolute top-0 bottom-0 w-180 pl-18 -z-1 bg-nav dark:bg-lnav duration-1000" :class="menuStore.isVisible ? 'left-68' : '-left-68'">
+    <div class="absolute top-0 bottom-0 w-180 pl-18 -z-1 bg-nav dark:bg-lnav duration-200" :class="menuStore.isVisible ? 'left-68' : '-left-68'">
       <!-- 搜素框 -->
       <div class="pl-4 pr-16 my-5">
         <div class="border-b-1 border-b-gray-500">
