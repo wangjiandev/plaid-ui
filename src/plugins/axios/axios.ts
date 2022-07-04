@@ -1,6 +1,7 @@
 import type { AxiosInstance, AxiosRequestConfig } from 'axios'
 import axios from 'axios'
 import type { IResponseResult } from '@/types/response'
+import { close, start } from '@/plugins/nprogress'
 
 export default class Axios {
   private instance: AxiosInstance
@@ -31,6 +32,7 @@ export default class Axios {
   private interceptorsRequest() {
     this.instance.interceptors.request.use(
       (config: AxiosRequestConfig) => {
+        start()
         // config.headers = {
         //   Accept: 'application/json',
         //   Authorization: 'Bearer 123456', // ${store.get(CacheEnum.TOKEN_NAME)}
@@ -47,6 +49,7 @@ export default class Axios {
     this.instance.interceptors.response.use(
       (response) => {
         // if (response.data?.message)
+        close()
         return response
       },
       (error: any) => {
