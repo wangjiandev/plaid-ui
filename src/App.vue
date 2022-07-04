@@ -12,11 +12,11 @@ test()
 </script>
 
 <template>
-  <n-loading-bar-provider>
-    <NConfigProvider :theme="theme">
+  <NConfigProvider :theme="theme">
+    <n-loading-bar-provider>
       <RouterView />
-    </NConfigProvider>
-  </n-loading-bar-provider>
+    </n-loading-bar-provider>
+  </NConfigProvider>
 </template>
 
 <style></style>
